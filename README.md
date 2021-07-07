@@ -1,5 +1,4 @@
-# win-11
-Fake Windows 11.
+# Fake Windows 11
 
 Link: https://fiddlerzsolt.github.io/win-11/
 
