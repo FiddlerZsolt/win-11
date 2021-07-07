@@ -1,0 +1,376 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f1e3));
+  background-image: linear-gradient(#f7f1e3);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.search {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.btn {
+  background-color: #f7f1e3;
+  border: transparent;
+  padding: 5px 8px;
+  -webkit-box-shadow: 1px 1px 0 rgba(121, 121, 121, 0.233);
+          box-shadow: 1px 1px 0 rgba(121, 121, 121, 0.233);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .desktop {
+  background-color: #f7f1e3;
+  background-image: url(../assets/wallpapers/Windows-11-white.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container .start {
+  position: fixed;
+  bottom: 0;
+  background-color: #f7f1e3;
+  opacity: 0.9;
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .start .icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .start .icons .icon-container {
+  border-radius: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3px 5px;
+}
+
+.container .start .icons .icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.container .start .side {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .start .side .status-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 10px;
+}
+
+.container .start .side .status-icons .status-icon {
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  margin-right: 5px;
+  border-radius: 2%;
+}
+
+.container .start .side .status-icons .status-icon:first-child {
+  margin: 0 20px;
+}
+
+.container .start .side .status-icons .status-icon:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.container .start .side .clock {
+  width: 80px;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .start-menu {
+  background-color: #f2f2f2;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  bottom: 200%;
+  width: 600px;
+  height: 700px;
+  border-radius: 1.3%;
+  opacity: 0;
+}
+
+.container .start-menu .menu-search {
+  background-color: #f7f1e3;
+  border-radius: 2%;
+  border-bottom: 2px solid #34ace0;
+  height: 40px;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .start-menu .menu-search input {
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  margin: 0 10px;
+}
+
+.container .start-menu .menu-search .search {
+  fill: #34ace0;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.container .start-menu .pinned-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  padding: 10px 30px;
+}
+
+.container .start-menu .pinned-icons .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 10px;
+}
+
+.container .start-menu .pinned-icons .row .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  border-radius: 4%;
+  width: 70px;
+  height: 70px;
+}
+
+.container .start-menu .pinned-icons .row .icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.container .start-menu .pinned-icons .row .icon-container .icon {
+  margin-bottom: 5px;
+}
+
+.container .start-menu .pinned-icons .row .icon-container .icon-title {
+  font-size: 0.9rem;
+}
+
+.container .start-menu .navigation {
+  border-top: 1px solid #aaa69d;
+  background-color: rgba(0, 0, 0, 0.014);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.container .start-menu .navigation .profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 5px;
+  border-radius: 30% 8% 8% 30%;
+}
+
+.container .start-menu .navigation .profil .icon {
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 5px;
+  background-color: #d6d6d6;
+}
+
+.container .start-menu .navigation .profil .profil-name {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container .start-menu .navigation .profil:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.container .start-menu .navigation .shutdown {
+  background-color: transparent;
+  border: transparent;
+  outline: transparent;
+  cursor: pointer;
+  padding: 2px 10px;
+  border-radius: 8%;
+}
+
+.container .start-menu .navigation .shutdown .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.container .start-menu .navigation .shutdown:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
+.start-menu.active {
+  -webkit-animation: popup 0.3s ease-in-out forwards;
+          animation: popup 0.3s ease-in-out forwards;
+}
+
+@-webkit-keyframes popup {
+  0% {
+    bottom: 200%;
+    opacity: 0;
+  }
+  1% {
+    bottom: 8%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 7%;
+    opacity: 1;
+  }
+}
+
+@keyframes popup {
+  0% {
+    bottom: 200%;
+    opacity: 0;
+  }
+  1% {
+    bottom: 8%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 7%;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=main.css.map */
