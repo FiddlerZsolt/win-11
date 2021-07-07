@@ -12,9 +12,22 @@ body {
   background-image: linear-gradient($white);
 }
 
+.flex {
+  display: flex;
+}
+
+.icon-container {
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
 .icon {
-  width: 40px;
-  height: 40px;
+  width: $icon;
+  height: $icon;
 }
 
 .search {
@@ -31,12 +44,11 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
-  display: flex;
   flex-direction: column;
 
   .desktop {
     background-color: $white;
-    background-image: url(../assets/wallpapers/Windows-11-light.jpg);
+    background-image: url($light-bg);
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -50,26 +62,17 @@ body {
     opacity: 0.9;
     height: 60px;
     width: 100%;
-    display: flex;
     justify-content: space-between;
 
     .icons {
       width: 100%;
-      display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
 
       .icon-container {
         border-radius: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 3px 5px;
-
-        &:hover {
-          background-color: $hover-color;
-        }
       }
     }
 
@@ -77,12 +80,10 @@ body {
       position: absolute;
       right: 0;
       height: 100%;
-      display: flex;
       align-items: center;
       justify-content: space-between;
 
       .status-icons {
-        display: flex;
         flex-direction: row;
         margin-right: 10px;
 
@@ -106,7 +107,6 @@ body {
       .clock {
         width: 80px;
         margin-right: 10px;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -125,13 +125,16 @@ body {
     border-radius: 1.3%;
     opacity: 0;
 
+    &.active {
+      animation: popup 0.3s ease-in-out forwards;
+    }
+
     .menu-search {
       background-color: $white;
       border-radius: 2%;
       border-bottom: 2px solid $blue;
       height: 40px;
       margin: 20px;
-      display: flex;
       flex-direction: row;
       align-items: center;
 
@@ -151,32 +154,23 @@ body {
     }
 
     .pinned-icons {
-      display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: stretch;
       padding: 10px 30px;
 
       .row {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
         margin: 10px;
 
         .icon-container {
-          display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
           padding: 5px;
           border-radius: 4%;
           width: 70px;
           height: 70px;
-
-          &:hover {
-            background-color: $hover-color;
-          }
 
           .icon {
             margin-bottom: 5px;
@@ -192,7 +186,6 @@ body {
     .navigation {
       border-top: 1px solid $grey;
       background-color: rgba(0, 0, 0, 0.014);
-      display: flex;
       flex-direction: row;
       justify-content: space-between;
       padding: 15px 50px;
@@ -201,7 +194,6 @@ body {
       width: 100%;
 
       .profil {
-        display: flex;
         flex-direction: row;
         align-items: center;
         padding-right: 5px;
@@ -242,10 +234,6 @@ body {
       }
     }
   }
-}
-
-.start-menu.active {
-  animation: popup 0.3s ease-in-out forwards;
 }
 
 @keyframes popup {

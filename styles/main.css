@@ -12,6 +12,25 @@ body {
   background-image: linear-gradient(#f7f1e3);
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icon-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.89);
+}
+
 .icon {
   width: 40px;
   height: 40px;
@@ -33,9 +52,6 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -44,7 +60,7 @@ body {
 
 .container .desktop {
   background-color: #f7f1e3;
-  background-image: url(../assets/wallpapers/Windows-11-light.jpg);
+  background-image: url("../assets/wallpapers/Windows-11-light.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -58,9 +74,6 @@ body {
   opacity: 0.9;
   height: 60px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -68,9 +81,6 @@ body {
 
 .container .start .icons {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -85,29 +95,13 @@ body {
 
 .container .start .icons .icon-container {
   border-radius: 2%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 3px 5px;
-}
-
-.container .start .icons .icon-container:hover {
-  background-color: rgba(255, 255, 255, 0.89);
 }
 
 .container .start .side {
   position: absolute;
   right: 0;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -117,9 +111,6 @@ body {
 }
 
 .container .start .side .status-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -146,9 +137,6 @@ body {
 .container .start .side .clock {
   width: 80px;
   margin-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -174,15 +162,17 @@ body {
   opacity: 0;
 }
 
+.container .start-menu.active {
+  -webkit-animation: popup 0.3s ease-in-out forwards;
+          animation: popup 0.3s ease-in-out forwards;
+}
+
 .container .start-menu .menu-search {
   background-color: #f7f1e3;
   border-radius: 2%;
   border-bottom: 2px solid #34ace0;
   height: 40px;
   margin: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -207,9 +197,6 @@ body {
 }
 
 .container .start-menu .pinned-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -223,9 +210,6 @@ body {
 }
 
 .container .start-menu .pinned-icons .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -238,27 +222,14 @@ body {
 }
 
 .container .start-menu .pinned-icons .row .icon-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 5px;
   border-radius: 4%;
   width: 70px;
   height: 70px;
-}
-
-.container .start-menu .pinned-icons .row .icon-container:hover {
-  background-color: rgba(255, 255, 255, 0.89);
 }
 
 .container .start-menu .pinned-icons .row .icon-container .icon {
@@ -272,9 +243,6 @@ body {
 .container .start-menu .navigation {
   border-top: 1px solid #aaa69d;
   background-color: rgba(0, 0, 0, 0.014);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -289,9 +257,6 @@ body {
 }
 
 .container .start-menu .navigation .profil {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -337,11 +302,6 @@ body {
 
 .container .start-menu .navigation .shutdown:hover {
   background-color: rgba(255, 255, 255, 0.89);
-}
-
-.start-menu.active {
-  -webkit-animation: popup 0.3s ease-in-out forwards;
-          animation: popup 0.3s ease-in-out forwards;
 }
 
 @-webkit-keyframes popup {
