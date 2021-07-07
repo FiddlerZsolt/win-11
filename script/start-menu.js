@@ -2,17 +2,13 @@ const startMenu = document.querySelector(".start-menu");
 const startBtn = document.getElementById("start-btn");
 
 // == Start menu open & close == //
-function startToggle() {
+startBtn.addEventListener("click", (e) => {
   startMenu.classList.toggle("active");
-}
+});
 
 // == Clicking outside the start menu closes == //
-window.addEventListener("click", function (e) {
-  if (startMenu.contains(e.target) === false) {
-    if (startBtn.contains(e.target)) {
-      console.log("NEM a start menün kattintottál de a gombon");
-    } else {
+window.addEventListener("click", (e) => {
+  if (!startMenu.contains(e.target) && !startBtn.contains(e.target)) {
       startMenu.classList.remove("active");
-    }
   }
 });
